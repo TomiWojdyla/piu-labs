@@ -20,8 +20,7 @@ main {
 }
 
 .theme-label {
-  font-size: 30px;
-  border: none;
+  font-size: 35px;
 }
 
 #theme-button {
@@ -37,7 +36,7 @@ form {
   box-shadow: 0 0 10px #888888;
 }
 
-body:has(#dark-mode-btn:checked) form {
+body:has(#theme-button:checked) form {
   background-color: #1c1c1c;
   color: white;
 }
@@ -45,7 +44,8 @@ body:has(#dark-mode-btn:checked) form {
 .form-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
+  margin-top: 14px;
 }
 
 label {
@@ -58,7 +58,7 @@ select {
   cursor: pointer;
 }
 
-body:has(#dark-mode-btn:checked) input,
+body:has(#theme-button:checked) input,
 select {
   background-color: #383838;
   color: white;
@@ -80,6 +80,7 @@ fieldset {
   flex-direction: column;
   padding: 16px 12px;
   gap: 16px;
+  margin-top: 14px;
 }
 
 input[type='submit'] {

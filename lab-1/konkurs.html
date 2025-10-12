@@ -12,15 +12,16 @@
       <a href="./index.html">Powrót do Lab 1</a>
       <hr />
     </nav>
-    <main>
-    <div class="header">
-      <h1>Zgłoszenie<br />do Konkursu Plastycznego</h1>
 
-      <label for="theme-button" class="theme-label" title="Zmień motyw">
-        <input id="theme-button" name="theme-button" type="checkbox">
-        <span>🌗</span>
-      </label>
-    </div>
+    <main>
+      <div class="header">
+        <h1>Zgłoszenie<br />do Konkursu Plastycznego</h1>
+
+        <label for="theme-button" class="theme-label" title="Zmień motyw">
+          <input id="theme-button" name="theme-button" type="checkbox">
+          <span>🌗</span>
+        </label>
+      </div>
 
         <form action="https://httpbin.org/get" method="get">
           <div class="form-item">
@@ -72,9 +73,7 @@
               </div>
 
               <div class="form-item">
-                <label for="liczba-prac"
-                  >Liczba zgłaszanych prac (od 1 do 6):</label
-                >
+                <label for="liczba-prac">Liczba zgłaszanych prac (od 1 do 6):</label>
                 <input
                   id="liczba-prac"
                   name="liczba-prac"
@@ -99,10 +98,10 @@
               <div class="form-item">
                 <label for="kategoria-pracy">Kategoria pracy:</label>
                 <select id="kategoria-pracy" name="kategoria-pracy" required>
-                  <option>-- wybierz kategorię --</option>
-                  <option>Rysunek</option>
-                  <option>Malarstwo</option>
-                  <option>Grafika cyfrowa</option>
+                  <option value="">-- wybierz kategorię --</option>
+                  <option value="rysunek">Rysunek</option>
+                  <option value="malarstwo">Malarstwo</option>
+                  <option value="grafika-cyfrowa">Grafika cyfrowa</option>
                 </select>
               </div>
 
