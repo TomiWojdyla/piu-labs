@@ -1,0 +1,26 @@
+/* Minimalny reset  */
+body {
+  text-align: center; /* wyrównanie tekstu do środka w poziomie */
+}
+
+a.subpage {
+  display: block;
+}
+
+.center-flex {
+  display: flex; /* flex-container box */
+  justify-content: center; /* poziome wyśrodkowanie */
+  align-items: center; /* pionowe wyśrodkowanie */
+  min-height: 100vh; /* pełna wysokość okna przeglądarki */
+  margin: 0; /*brak marginesu body*/
+}
+
+.login-box {
+  display: flex; /* flex-container box */
+  flex-direction: column; /* elementy jeden pod drugim */
+  gap: 12px; /* przerwa miedzy elementami */
+  box-shadow: 0 0 10px #888888; /* cień boxa: offset poziomo-offset pionowo-szerokosc rozmycia-kolor */
+  padding: 30px 30px; /* odstęp miedzy boxem a zawartością: pionowo-poziomo */
+  border-radius: 6px; /* wyokręglenie boxa */
+  min-width: 300px; /* minimalna szerokość boxa */
+}
