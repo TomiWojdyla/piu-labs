@@ -65,6 +65,7 @@ select {
   border-color: #444444;
 }
 
+/* dark mode dla ikony kalendarza */
 body:has(#theme-button:checked)
   input[type='date']::-webkit-calendar-picker-indicator {
   filter: invert();
