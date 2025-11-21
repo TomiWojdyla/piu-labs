@@ -213,7 +213,7 @@ a:hover {
   transform: translateY(0);
 
   /* animujemy left (ruch w poziomie) + kolor */
-  /* transition: left 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), */
+  /* transition: left 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), test */
   transition: left 0.3s cubic-bezier(0.5, -1.2, 0.5, 1.2),
     background-color 0.3s ease;
 }
