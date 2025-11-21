@@ -193,11 +193,12 @@ a:hover {
   box-shadow: 0 0 0 2px black;
 }
 
-/* #size-picker div {
+/* WERSJA DYNAMICZNA  */
+#size-picker div {
   position: relative;
-} */
+}
 
-/* #size-picker div::before {
+#size-picker div::before {
   content: '';
   position: absolute;
   top: 0;
@@ -208,26 +209,80 @@ a:hover {
   border-radius: 6px;
   z-index: 1;
 
-  transform: translateX(calc(40px + 0.75rem));
+  /* zamiast translateX – tylko pion, start z 0 */
+  transform: translateY(0);
 
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+  /* animujemy left (ruch w poziomie) + kolor */
+  transition: left 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
     background-color 0.3s ease;
-} */
+}
 
-/* #size-picker div:has(#size-s:checked)::before {
-  transform: translateX(0);
+#size-picker div:has(#size-s:checked)::before {
+  left: 0;
+  animation: jump-s 0.5s ease-out;
 }
 #size-picker div:has(#size-m:checked)::before {
-  transform: translateX(calc(40px + 0.75rem));
+  left: calc(40px + 0.75rem);
+  animation: jump-m 0.5s ease-out;
 }
 #size-picker div:has(#size-l:checked)::before {
-  transform: translateX(calc(2 * (40px + 0.75rem)));
+  left: calc(2 * (40px + 0.75rem));
+  animation: jump-l 0.5s ease-out;
 }
 #size-picker div:has(#size-xl:checked)::before {
-  transform: translateX(calc(3 * (40px + 0.75rem)));
-} */
+  left: calc(3 * (40px + 0.75rem));
+  animation: jump-xl 0.5s ease-out;
+}
 
-/* #size-picker label {
+@keyframes jump-s {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes jump-m {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes jump-l {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes jump-xl {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#size-picker label {
   display: grid;
   place-items: center;
   width: 40px;
@@ -253,8 +308,9 @@ a:hover {
   border-color: var(--leading-color);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
+}
 
+/* WERASJA STATYCZMA
 #size-picker label {
   display: grid;
   place-items: center;
@@ -275,7 +331,7 @@ a:hover {
   border-color: var(--leading-color);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .price-text {
   text-align: center;
