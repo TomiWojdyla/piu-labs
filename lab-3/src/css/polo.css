@@ -299,6 +299,7 @@ a:hover {
   position: relative;
   z-index: 2;
 }
+
 #size-picker label:hover {
   border-color: var(--leading-color);
   transform: scale(1.1);
