@@ -7,7 +7,7 @@ let notificationTimeoutId = null;
 
 const COLUMN_LABELS = {
     todo: 'Do zrobienia',
-    'in-progress': 'W trakcie',
+    inprogress: 'W trakcie',
     done: 'Zrobione',
 };
 
@@ -393,13 +393,13 @@ function moveCard(cardId, direction) {
     let newColumn = oldColumn;
 
     if (oldColumn === 'todo' && direction === 'right') {
-        newColumn = 'in-progress';
-    } else if (oldColumn === 'in-progress' && direction === 'left') {
+        newColumn = 'inprogress';
+    } else if (oldColumn === 'inprogress' && direction === 'left') {
         newColumn = 'todo';
-    } else if (oldColumn === 'in-progress' && direction === 'right') {
+    } else if (oldColumn === 'inprogress' && direction === 'right') {
         newColumn = 'done';
     } else if (oldColumn === 'done' && direction === 'left') {
-        newColumn = 'in-progress';
+        newColumn = 'inprogress';
     }
 
     if (newColumn === oldColumn) return;
